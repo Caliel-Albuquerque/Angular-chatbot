@@ -1,0 +1,46 @@
+.chat-wrapper {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 30px 14px 30px;
+    gap: 20px;
+    border-bottom: solid 1px var(--border-color);
+  }
+
+  button {
+    border: none;
+    background: transparent;
+  }
+
+  .icon-museam {
+    height: 40px;
+    width: 40px;
+  }
+
+  .status {
+    p {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 500;
+      color: var(--online-color);
+
+      .toggle-online {
+        background-color: var(--online-color);
+        border-radius: 50px;
+        height: 6px;
+        width: 6px;
+      }
+
+      p {
+        color: var(--online-color);
+      }
+    }
+  }  
+}
