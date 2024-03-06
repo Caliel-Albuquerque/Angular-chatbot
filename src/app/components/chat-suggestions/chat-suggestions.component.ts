@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IconDoubtComponent } from '../../icons/icon-doubt/icon-doubt.component';
 import { IconSearchComponent } from '../../icons/icon-search/icon-search.component';
 import { IconHistoryComponent } from '../../icons/icon-history/icon-history.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-chat-suggestions',
@@ -9,7 +10,8 @@ import { IconHistoryComponent } from '../../icons/icon-history/icon-history.comp
   imports: [
     IconDoubtComponent,
     IconSearchComponent,
-    IconHistoryComponent
+    IconHistoryComponent,
+    CommonModule
 
   ],
   templateUrl: './chat-suggestions.component.html',
@@ -20,7 +22,7 @@ export class ChatSuggestionsComponent {
   initialQuestions = [
     {
       title: "Dúvidas",
-      icon: "",
+      icon: "doubt",
       questions: [
         "Qual o valor para entrar no museu?",
         "Quando o museu está aberto?"
@@ -28,7 +30,7 @@ export class ChatSuggestionsComponent {
     },
     {
       title: "Curiosidades",
-      icon: "",
+      icon: "search",
       questions: [
         "Quem era o prefeito na época da criação?",
         "Quantos cômodos existem no museu?",
@@ -37,7 +39,7 @@ export class ChatSuggestionsComponent {
     },
     {
       title: "História",
-      icon: "",
+      icon: "history",
       questions: [
         "Quando o Museu foi criado?",
         "Qual o estilo arquitetônico do prédio?",
@@ -45,4 +47,12 @@ export class ChatSuggestionsComponent {
       ]
     }
   ]
+
+  trackByFn(index: any, item: any): any {
+    return item.id;
+  }
+
+  trackByQuestionFn(index: any, question: any): any {
+    return question; 
+  }
 }

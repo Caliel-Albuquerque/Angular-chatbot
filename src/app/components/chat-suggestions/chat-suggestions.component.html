@@ -1,7 +1,14 @@
-<div>
-  <div class="suggestion-topic">
-    @for(user of initialQuestions; track ) {
-      {{user}}
-    }
+<div class="suggestion-wrapper">
+  <div class="suggestion-topic" *ngFor="let item of initialQuestions; trackBy: trackByFn">
+    <div class="suggestion-header">
+      <icon-doubt *ngIf="item.icon === 'doubt' " />
+      <icon-search *ngIf="item.icon === 'search' " />
+      <icon-history *ngIf="item.icon === 'history' " />
+      <span>{{ item.title }}</span>
+    </div>
+
+    <ul class="suggestion-list">
+      <li *ngFor="let question of item.questions; trackBy: trackByQuestionFn">{{ question }}</li>
+    </ul>
   </div>
 </div>
