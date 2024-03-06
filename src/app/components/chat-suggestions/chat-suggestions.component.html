@@ -8,7 +8,12 @@
     </div>
 
     <ul class="suggestion-list">
-      <li *ngFor="let question of item.questions; trackBy: trackByQuestionFn">{{ question }}</li>
+      <li 
+      *ngFor="let question of item.questions; trackBy: trackByQuestionFn"
+      (click) = "selectQuestion(question)"
+      >
+      {{ question }}
+    </li>
     </ul>
   </div>
 </div>

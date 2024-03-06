@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { IconDoubtComponent } from '../../icons/icon-doubt/icon-doubt.component';
 import { IconSearchComponent } from '../../icons/icon-search/icon-search.component';
 import { IconHistoryComponent } from '../../icons/icon-history/icon-history.component';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-chat-suggestions',
@@ -18,6 +19,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './chat-suggestions.component.scss'
 })
 export class ChatSuggestionsComponent {
+  @Output() questionSelected = new EventEmitter<string>();
 
   initialQuestions = [
     {
@@ -54,5 +56,9 @@ export class ChatSuggestionsComponent {
 
   trackByQuestionFn(index: any, question: any): any {
     return question; 
+  }
+
+  selectQuestion(question: string) {
+    this.questionSelected.emit(question);
   }
 }

@@ -1,0 +1,19 @@
+.baloon {
+  padding: 18px;
+  width: auto;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+
+  &.response {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+  
+  }
+
+  
+  &.request {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+}

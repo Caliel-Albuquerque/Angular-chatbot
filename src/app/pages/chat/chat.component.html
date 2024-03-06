@@ -1,7 +1,7 @@
 <main class="chat-wrapper">
   <header>
     <button (click)="closeChat()">
-      <icon-arrow-left class="icon-museam"/>
+      <icon-arrow-left class="icon-museam" />
     </button>
 
     <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,6 +20,7 @@
   </header>
 
   <section>
-    <app-chat-suggestions />
+    <app-chat-suggestions (questionSelected)="sendSuggestedQuestion($event)" *ngIf="questions.length < 1" />
+    <chat-dialog [messages]="questions"/>
   </section>
 </main>
