@@ -19,7 +19,7 @@
     </div>
   </header>
 
-  <section>
+  <section class="chat-content">
     <app-chat-suggestions (questionSelected)="sendSuggestedQuestion($event)" *ngIf="questions.length < 1" />
     <chat-dialog [messages]="questions"/>
   </section>

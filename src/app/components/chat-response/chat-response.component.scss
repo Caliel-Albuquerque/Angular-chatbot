@@ -1,19 +1,30 @@
-.baloon {
-  padding: 18px;
-  width: auto;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-
-  &.response {
-    background-color: var(--bg-secondary);
-    color: var(--text-secondary);
+.baloon-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   
-  }
-
+  .baloon {
+    padding: 18px;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
   
-  &.request {
-    background-color: var(--primary-color);
-    color: #fff;
+    &.response {
+      background-color: var(--bg-secondary);
+      color: var(--text-secondary);
+      align-self: flex-start;
+      border-radius: 25px 25px 25px 0;
+    
+    }
+  
+    
+    &.request {
+      background-color: var(--primary-color);
+      color: #fff;
+      align-self: flex-end;
+      border-radius: 25px 0 25px 25px;
+    }
   }
 }
+
