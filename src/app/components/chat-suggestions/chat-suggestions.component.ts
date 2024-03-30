@@ -26,8 +26,8 @@ export class ChatSuggestionsComponent {
       title: "Dúvidas",
       icon: "doubt",
       questions: [
-        "Qual o valor para entrar no museu?",
-        "Quando o museu está aberto?"
+        "Qual o valor para entrar na paço?",
+        "Quando o paço está aberto?"
       ]
     },
     {
@@ -35,15 +35,15 @@ export class ChatSuggestionsComponent {
       icon: "search",
       questions: [
         "Quem era o prefeito na época da criação?",
-        "Quantos cômodos existem no museu?",
-        "Quantas peças estão exibidas no museu?"
+        "Quantos cômodos existem no paço?",
+        "Quantas peças estão exibidas no paço?"
       ]
     },
     {
       title: "História",
       icon: "history",
       questions: [
-        "Quando o Museu foi criado?",
+        "Quando o paço foi criada?",
         "Qual o estilo arquitetônico do prédio?",
         "Quem foi o arquiteto do prédio?"
       ]
